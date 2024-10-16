@@ -204,6 +204,7 @@ register_model_info(
         "qwen-plus-0828",
         "qwen2-vl-7b-instruct",
         "qwen-vl-max-0809",
+
     ],
     "Qwen Max",
     "https://help.aliyun.com/zh/dashscope/developer-reference/model-introduction",
