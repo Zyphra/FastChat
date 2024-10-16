@@ -748,6 +748,19 @@ register_conv_template(
     )
 )
 
+register_conv_template(
+    Conversation(
+        name="zamba-instruct",
+        system_template="",
+        system_message='',
+        roles=("<|im_start|>user", "<|im_start|>assistant"),
+        sep_style=SeparatorStyle.CHATML,
+        sep="<|im_end|>",
+        # sep2="\n"
+        # stop_token_ids=[32000, 32001],
+    )
+)
+
 # api-based default template
 register_conv_template(
     Conversation(

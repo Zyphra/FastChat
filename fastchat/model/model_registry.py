@@ -103,6 +103,7 @@ register_model_info(
         "qwen2-72b-instruct",
         "qwen-max-0403",
         "qwen-max-0428",
+        "Qwen_Qwen2-1.5B-Instruct",
     ],
     "Qwen Max",
     "https://help.aliyun.com/zh/dashscope/developer-reference/model-introduction",

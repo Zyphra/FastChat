@@ -110,8 +110,8 @@ def get_model_answers(
                 qs = question["turns"][j]
                 conv.append_message(conv.roles[0], qs)
                 conv.append_message(conv.roles[1], None)
-                prompt = conv.get_prompt()
-                input_ids = tokenizer([prompt]).input_ids
+                prompt = conv.get_prompt()                
+                input_ids = tokenizer([prompt], add_special_tokens=False).input_ids
 
                 if temperature < 1e-4:
                     do_sample = False
@@ -125,6 +125,7 @@ def get_model_answers(
                         do_sample=do_sample,
                         temperature=temperature,
                         max_new_tokens=max_new_token,
+                        cache_implementation="dynamic",
                     )
                     if model.config.is_encoder_decoder:
                         output_ids = output_ids[0]

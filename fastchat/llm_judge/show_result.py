@@ -4,6 +4,9 @@ python3 show_result.py --mode [single|pairwise-baseline|pairwise-all]
 """
 import argparse
 import pandas as pd
+pd.set_option('display.max_colwidth', None)
+pd.set_option('display.max_rows', None)
+pd.set_option('display.max_columns', None)
 
 
 def display_result_single(args):
